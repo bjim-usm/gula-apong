@@ -6,7 +6,7 @@ layout: home
 ---
 <div>
 <span>
-<img src="/assets/Picture 1.png"/>
+<img src="/assets/images/Picture1.png"/>
 <h1 >GULA APONG</h1>
 </span>
 </div>

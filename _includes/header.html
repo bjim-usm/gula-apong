@@ -20,44 +20,45 @@
 
  
         {% assign dir_names = site.data.dir_names %}
+        <div class="trigger">
+          <ul class="menu">
+            {% assign dir_names = site.data.dir_names %}
+            {% assign pages_by_dir = site.pages | group_by: "dir" %}
+            
+            {% for dir in pages_by_dir %}
+              {% assign dir_key = dir.name | remove: "/" %}
+              {% assign display_name = dir_names[dir_key] | default: dir_key | capitalize %}
+              {% if display_name == "Assets" %}
+                {% continue %}
+              {% endif %}
+              {% if dir.name != "/" %}
+                <li class="menu-item">
+                  <a href="#">{{ display_name }}</a>
+                  <ul class="submenu">
+                    {% assign sorted_pages = dir.items | sort: "title" %}
+                    {% for page in sorted_pages %}
+                      {% if page.title %}
+                        <li class="submenu-item">
+                          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% else %}
+                {% for page in dir.items %}
+                  {% if page.title %}
+                    <li class="menu-item">
+                      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
 
-        <ul class="menu">
-          {% assign dir_names = site.data.dir_names %}
-          {% assign pages_by_dir = site.pages | group_by: "dir" %}
-          
-          {% for dir in pages_by_dir %}
-            {% assign dir_key = dir.name | remove: "/" %}
-            {% assign display_name = dir_names[dir_key] | default: dir_key | capitalize %}
-            {% if display_name == "Assets" %}
-              {% continue %}
-            {% endif %}
-            {% if dir.name != "/" %}
-              <li class="menu-item">
-                <a href="#">{{ display_name }}</a>
-                <ul class="submenu">
-                  {% assign sorted_pages = dir.items | sort: "title" %}
-                  {% for page in sorted_pages %}
-                    {% if page.title %}
-                      <li class="submenu-item">
-                        <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-                      </li>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
-              </li>
-            {% else %}
-              {% for page in dir.items %}
-                {% if page.title %}
-                  <li class="menu-item">
-                    <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-                  </li>
-                {% endif %}
-              {% endfor %}
-            {% endif %}
 
-
-          {% endfor %}
-        </ul>
+            {% endfor %}
+          </ul>
+        </div>
       </nav>
     {%- endif -%}
   </div>
