@@ -2,9 +2,6 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
@@ -26,7 +23,28 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+        <div>
+          <h3>Funding by:</h3>
+          <div class="footer-list-logo">
+            <img src="{{ "/assets/images/jata-negara-logo.svg" | relative_url }}"  alt="logo" class="footer-logo"/>
+            <img src="{{ "/assets/images/TERAJU-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
+          </div>
+        </div>
+        <div>
+          <h3>Implementing Agency :</h3>
+          <div class="footer-list-logo">
+            <img src="{{ "/assets/images/usm-logo.svg" | relative_url }}"  alt="logo" class="footer-logo"/>
+          </div>
+        </div>
+        <div>
+          <h3>Partnership :</h3>
+          <div class="footer-list-logo">
+            <img src="{{ "/assets/images/kkm-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
+            <img src="{{ "/assets/images/KPDN-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
+            <img src="{{ "/assets/images/Fama-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
+            <img src="{{ "/assets/images/jabatan-pertanian-sarawak-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
+            <img src="{{ "/assets/images/jakim-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
+        </div>
       </div>
     </div>
 

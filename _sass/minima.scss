@@ -53,10 +53,21 @@ $bistre-2: rgba(46, 27, 17, 1);
   font-size: $base-font-size * $ratio;
 }
 
+@mixin full-width-bg($bg-color) {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: $bg-color;
+}
+
+
 // Import partials.
 @import
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "minima/menu"
+  "minima/menu",
+  "minima/index"
 ;
