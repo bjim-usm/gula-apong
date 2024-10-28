@@ -4,39 +4,67 @@
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
+        {% assign dir_names = site.data.dir_names %}
+        <div class="trigger">
+          <ul class="menu">
+            {% assign dir_names = site.data.dir_names %}
+            {% assign pages_by_dir = site.pages | group_by: "dir" %}
+            
+            {% for dir in pages_by_dir %}
+              {% assign dir_key = dir.name | remove: "/" %}
+              {% assign display_name = dir_names[dir_key] | default: dir_key | capitalize %}
+              {% if display_name == "Assets" %}
+                {% continue %}
+              {% endif %}
+              {% if dir.name != "/" %}
+                <li class="menu-item">
+                  <a href="#">{{ display_name }}</a>
+                  <ul class="submenu">
+                    {% assign sorted_pages = dir.items | sort: "title" %}
+                    {% for page in sorted_pages %}
+                      {% if page.title %}
+                        <li class="submenu-item">
+                          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                        </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% else %}
+                {% for page in dir.items %}
+                  {% if page.title %}
+                    <li class="menu-item">
+                      <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+
+            {% endfor %}
+          </ul>
+        </div>
       </div>
 
       <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+        <!-- {%- include social.html -%} -->
       </div>
 
       <div class="footer-col footer-col-3">
-        <div>
+        <div class="footer-list-logo-div">
           <h3>Funding by:</h3>
           <div class="footer-list-logo">
             <img src="{{ "/assets/images/jata-negara-logo.svg" | relative_url }}"  alt="logo" class="footer-logo"/>
             <img src="{{ "/assets/images/TERAJU-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
           </div>
         </div>
-        <div>
+        <div class="footer-list-logo-div">
           <h3>Implementing Agency :</h3>
           <div class="footer-list-logo">
             <img src="{{ "/assets/images/usm-logo.svg" | relative_url }}"  alt="logo" class="footer-logo"/>
           </div>
         </div>
-        <div>
+        <div class="footer-list-logo-div">
           <h3>Partnership :</h3>
           <div class="footer-list-logo">
             <img src="{{ "/assets/images/kkm-logo.png" | relative_url }}"  alt="logo" class="footer-logo"/>
@@ -47,7 +75,17 @@
         </div>
       </div>
     </div>
-
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <small>&copy; 2021 Apong. All rights reserved.</small>
+      </div>
+      <div class="footer-col footer-col-2">
+      </div>
+      <div class="footer-col footer-col-3">
+        
+      </div>
+      
+    </div>
   </div>
 
 </footer>

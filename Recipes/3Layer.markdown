@@ -3,6 +3,10 @@ layout: page
 title: 3 Layer Tea
 ---
 
+
+<div class="recipe-container">
+  <div class="recipe-content" markdown=1>
+
 ### INGREDIENTS
 - SPL Gula Apong Syrup (Original or Pandan)
 - Milk / Evaporated Milk
@@ -14,4 +18,10 @@ title: 3 Layer Tea
 3. Scoop in ice cubes if you want to have it cold. Skip to have it hot.
 4. Pour in milk / evaporated milk slowly into the glass to create the 2nd layer.
 5. Pour in tea / coffee extract to create the 3rd layer.
-6. Mix it well before consume.
+6. Mix it well before consuming.
+
+  </div>
+  <div class="recipe-image">
+    <img src="{{ "/assets/recipe-3-layer-tea.jpg" | relative_url }}" alt="3 Layer Tea">
+  </div>
+</div>

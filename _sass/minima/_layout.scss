@@ -113,15 +113,81 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
-  background-color: $bistre;
+  background-color: $ecru;
   h1, h2, h3, h4, h5, h6 {
-    color: $beige;
+    // color: $beige;
     margin: 0px
   }
 
   .footer-logo {
     height: 70px;
     margin: 8px 8px;
+  }
+
+  .footer-list-logo-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    > .menu-item {
+      float: left;
+      position: relative;
+  
+      > a {
+        display: block;
+        color: $bistre-2;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+  
+      &:hover {
+        > a {
+          background-color: $beige;
+         
+        }
+  
+        .submenu {
+          display: block;
+        }
+      }
+    }
+  }
+   /* Submenu Styling */
+   .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+    margin: 0px;
+  
+    .submenu-item {
+      float: none;
+      list-style-type: none;
+      margin: 0px;
+  
+      a {
+        color: $bistre-2;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+  
+        &:hover {
+          background-color: $beige;
+         
+        }
+      }
+    }
   }
 }
 

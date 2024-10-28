@@ -3,6 +3,11 @@ layout: page
 title: Sarawak ABC
 ---
 
+
+<div class="recipe-container">
+  <div class="recipe-content" markdown=1>
+
+
 ### INGREDIENTS  
 
 - SPL Gula Apong Syrup (Original or Pandan)
@@ -21,3 +26,9 @@ title: Sarawak ABC
 3. Transfer the shaved ice into the bowl.
 4. Pour in evaporated milk, drizzle rose syrup and top it with Gula Apong syrup for it's sweetness.
 5. For something extra special, top it with vanilla ice cream and even durian.
+
+  </div>
+  <div class="recipe-image">
+    <img src="{{ "/assets/recipe-abc.jpg" | relative_url }}" alt="3 Layer Tea">
+  </div>
+</div>

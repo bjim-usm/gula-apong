@@ -3,6 +3,8 @@ layout: page
 title: Buy
 ---
 
-Shopee  
-SPL Gula Apong Syrup (Original or Pandan)
-Local Store: 
+### Purchase our products
+
+<a href="https://my.shp.ee/zPUZ6GR">
+    <img src="{{ "/assets/shopee-page.png" | relative_url }}" >
+</a>
