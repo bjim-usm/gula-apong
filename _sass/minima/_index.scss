@@ -4,27 +4,43 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 32px;
-    width: 1024px;
+    max-width: 1024px;
     height: 900px;
     h1{
         font-family: $title-font-family;
         font-size: 4em;
     }
+
+    img {
+        height: 100px;
+    }
   
+    @include media-query($on-palm) {
+        height: 600px;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        img {
+            height: 50px;
+        }
+    }
 }
+
+
 
 .store-list-div {
     // @include full-width-bg($beige);
     position: relative;
-  width: 1024px;
   margin: 0 auto; // Center the parent container
 
   &::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 42%;
-    width: 102.5vw;
+    left: 50%;
+    width: 100vw;
     height: 100%;
     margin-left: -50vw;
     background-color: $beige;

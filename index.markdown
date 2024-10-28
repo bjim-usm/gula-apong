@@ -6,11 +6,11 @@ layout: home
 ---
 <div>
     <div class="main-title">
-        <lottie-player src="{{ "/assets/animation/home_product.json" | relative_url }}" background="transparent" speed="1"  direction="1" mode="normal" autoplay style="height: 500px"></lottie-player>
+        <lottie-player src="{{ "/assets/animation/home_product.json" | relative_url }}" background="transparent" speed="1"  direction="1" mode="normal" autoplay style=" width: 100%"></lottie-player>
         <h1 >PROUDLY MADE FROM SARAWAK</h1>
         <div class="logo-list">
-            <img src="{{"/assets/images/halal-logo.png" | relative_url}}" style="height : 100px"/>
-            <img src="{{"/assets/images/produk-muslim.png" | relative_url}}" style="height : 100px">
+            <img src="{{"/assets/images/halal-logo.png" | relative_url}}"/>
+            <img src="{{"/assets/images/produk-muslim.png" | relative_url}}" >
         </div>
     </div>
     <div class="store-list-div">
@@ -24,7 +24,7 @@ layout: home
             </div>
             <div class="store-list">
              {% for i in (1..5) %}
-                <img src="{{"/assets/logo"| append: i | append: '.png'  relative_url}}" class="store-logo" />
+                <img src="{{"/assets/logo"| append: i | append: '.png' | relative_url}}" class="store-logo" />
              {% endfor %}
             </div>
             <div>
@@ -32,7 +32,7 @@ layout: home
             </div>
             <div class="store-list">
              {% for i in (1..11) %}
-                <img src="{{"/assets/logo-west"| append: i | append: '.png'  relative_url}}" class="store-logo" />
+                <img src="{{"/assets/logo-west"| append: i | append: '.png' | relative_url}}" class="store-logo" />
              {% endfor %}
             </div>
         </div>
