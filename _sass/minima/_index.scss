@@ -80,12 +80,25 @@
     padding: 0;
     list-style-type: none;
     
-    .store-logo {
-        height: 80px;
-        border-radius: 5%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        .store-logo {
+            height: 80px;
+            border-radius: 5%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
     
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    @include media-query($on-palm) {
+        h1 {
+            font-size: 2em;
+        }
+        img {
+            height: 50px !important ;
+        }
     }
   }
 
@@ -144,9 +157,44 @@
         width: 100%;
     }
 
+    h1 {
+        text-align: center;
+    }
+
     @include media-query($on-palm) {
+
+        .header {
+            margin-top: 32px;
+            margin-bottom : 16px;
+        }
+
+        img {
+            max-width: 150px;
+            max-height: 150px;
+        }
+
+        .compare-list {
+            justify-content: center;
+        }
+
         .innovate-row {
             flex-direction: column;
+            padding: 0px;
         }
+        .innovate-col {
+            padding: 0px 0px 16px 0px;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                text-align: center;
+                max-width: 350px;
+            }
+        }
+
     }
 }
