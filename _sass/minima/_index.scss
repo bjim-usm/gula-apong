@@ -8,7 +8,8 @@
     height: 900px;
     h1{
         font-family: $title-font-family;
-        font-size: 4em;
+        font-size: 3.5em;
+        text-align: center;
     }
 
     img {
@@ -94,7 +95,7 @@
 
     @include media-query($on-palm) {
         h1 {
-            font-size: 2em;
+            font-size: 1.6em;
         }
         img {
             height: 50px !important ;
@@ -162,6 +163,10 @@
     }
 
     @include media-query($on-palm) {
+
+        h1 {
+            font-size: 1.6em;
+        }
 
         .header {
             margin-top: 32px;

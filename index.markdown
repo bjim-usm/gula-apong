@@ -39,7 +39,7 @@ layout: home
     </div>
     <div class="innovate-div">
         <div class="header">
-            <h1> WE INNOVATE AND TRANSFORM THE PRODUCTION! </h1>
+            <h1> We innovate and transform the production! </h1>
         </div>
         <div class="innovate-row">
             <div class="innovate-col">
@@ -58,7 +58,7 @@ layout: home
                     <img src="{{"/assets/innovate8-p.png" | relative_url}}" >
                 </div>   
                 <div class="description">
-                    <h2>Hygienic Cooking Process</h2>
+                    <h2>Hygienic cooking process</h2>
                     <p> New technique of cooking and preparing with in a community centre</p>
                 </div>
             </div>
@@ -70,7 +70,7 @@ layout: home
                     <img src="{{"/assets/innovate12-p.png" | relative_url}}">
                 </div>   
                 <div class="description">
-                    <h2>Attracting Packinging</h2>
+                    <h2>Attracting packinging</h2>
                     <p>Transforming new packaging for more attraction in global market </p>
                 </div>
             </div>
